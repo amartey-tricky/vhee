@@ -57,7 +57,7 @@ export function Header() {
             <NavLinks />
             <button
               type="button"
-              className="md:hidden focus:outline-none"
+              className="lg:hidden focus:outline-none"
               onClick={toggleMenu}
             >
               {isOpen ? (
