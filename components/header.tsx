@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { HeaderLogo } from "./headerLogo";
 import { NavLinks } from "./navLinks";
-import clsx from "clsx";
+import { DonationButton } from "./donationButton";
 
 const menuLinks = [
   {
@@ -57,7 +57,7 @@ export function Header() {
             <NavLinks />
             <button
               type="button"
-              className="md:hidden focus:outline-none"
+              className="lg:hidden focus:outline-none"
               onClick={toggleMenu}
             >
               {isOpen ? (
@@ -86,6 +86,7 @@ export function Header() {
               </Link>
             );
           })}
+          <DonationButton />
         </nav>
       </Transition>
     </>
