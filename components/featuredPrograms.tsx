@@ -18,9 +18,9 @@ const featuredPrograms = [
   },
   {
     id: 3,
-    title: "Housing and Reintegration",
+    title: "Mental Health Support",
     description:
-      "We provide safe and affordable housing options, job placement assistance, and counseling to facilitate successful reintegration.",
+    "We provide comprehensive mental health services, including counseling, therapy, and support groups, to address the unique challenges faced by individuals affected by streetism.",
     image: "/housing.jpg",
   },
 ];
