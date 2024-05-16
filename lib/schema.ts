@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from "zod";
 
 export const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -8,3 +8,15 @@ export const contactSchema = z.object({
 });
 
 export type contactFormData = z.infer<typeof contactSchema>;
+
+export const volunteerSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  phone: z
+    .string()
+    .min(10, "Invalid phone number")
+    .max(10, "Invalid phone number"),
+  message: z.string().min(1, "Message is required"),
+});
+
+export type volunteerFormData = z.infer<typeof volunteerSchema>;

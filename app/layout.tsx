@@ -1,8 +1,8 @@
 import { inter } from "@/components/fonts";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import Providers from "./provides";
 import type { Metadata } from "next";
+import Providers from "./provides";
 import "./globals.css";
 
 export const metadata: Metadata = {

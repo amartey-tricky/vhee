@@ -1,40 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { volunteerSchema } from "@/lib/schema";
+import type { volunteerFormData } from "@/lib/schema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import type { SubmitHandler } from "react-hook-form";
+import { toast } from "sonner";
+import { sendVolunteer } from "@/app/_actions";
 
-/**
- * The VolunteerForm component is a React functional component that renders a form for users to volunteer with the organization.
- *
- * The form includes fields for the user's name, email, phone, and a message. When the form is submitted, the form data is logged to the console and the formSubmitted state is set to true, which displays a success message.
- *
- * The component uses the useState hook to manage the form data and the formSubmitted state. The handleChange function is used to update the form data as the user types, and the handleSubmit function is called when the form is submitted.
- *
- * The component also includes some basic styling using Tailwind CSS classes.
- */
 export function VolunteerForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<volunteerFormData>({
+    resolver: zodResolver(volunteerSchema),
   });
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const processForm: SubmitHandler<volunteerFormData> = async (data) => {
+    const result = await sendVolunteer(data);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Here, you can add your logic to handle the volunteer form submission
-    // For example, you can send the form data to a server or an email service
-    console.log("Form Data:", formData);
-    setFormSubmitted(true);
+    if (result?.success) {
+      console.log({ data: result.data });
+      toast.success("Email sent successful");
+      reset();
+      return;
+    }
+
+    console.log(result?.error);
+    toast.error("Something went wrong");
   };
 
   return (
@@ -50,95 +45,103 @@ export function VolunteerForm() {
           difference in your community.
         </p>
 
-        {formSubmitted ? (
-          <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md mb-8">
-            <p>
-              Thank you for your interest in volunteering! We'll review your
-              submission and get back to you soon.
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <div className="mb-6">
-              <label
-                htmlFor="name"
-                className="block text-gray-700 font-bold mb-2"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
-            <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="block text-gray-700 font-bold mb-2"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
-            <div className="mb-6">
-              <label
-                htmlFor="phone"
-                className="block text-gray-700 font-bold mb-2"
-              >
-                Phone
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
-
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="block text-gray-700 font-bold mb-2"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                rows={4}
-                required
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+        <form onSubmit={handleSubmit(processForm)}>
+          <div className="mb-6">
+            <label
+              htmlFor="name"
+              className="block text-gray-700 font-bold mb-2"
             >
-              Submit
-            </button>
-          </form>
-        )}
+              Name
+            </label>
+            <input
+              {...register("name")}
+              type="text"
+              id="name"
+              name="name"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            {errors.name?.message && (
+              <p className="text-sm px-2 py-3 text-red-400">
+                {errors.name.message}
+              </p>
+            )}
+          </div>
+
+          <div className="mb-6">
+            <label
+              htmlFor="email"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Email
+            </label>
+            <input
+              {...register("email")}
+              type="email"
+              id="email"
+              name="email"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            {errors.email?.message && (
+              <p className="text-sm px-2 py-3 text-red-400">
+                {errors.email.message}
+              </p>
+            )}
+          </div>
+
+          <div className="mb-6">
+            <label
+              htmlFor="phone"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Phone
+            </label>
+            <input
+              {...register("phone")}
+              type="tel"
+              id="phone"
+              name="phone"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            {errors.phone?.message && (
+              <p className="text-sm px-2 py-3 text-red-400">
+                {errors.phone.message}
+              </p>
+            )}
+          </div>
+
+          <div className="mb-6">
+            <label
+              htmlFor="message"
+              className="block text-gray-700 font-bold mb-2"
+            >
+              Message
+            </label>
+            <textarea
+              {...register("message")}
+              id="message"
+              name="message"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              rows={4}
+              required
+            />
+            {errors.message?.message && (
+              <p className="text-sm px-2 py-3 text-red-400">
+                {errors.message.message}
+              </p>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+          >
+            {isSubmitting ? "Submitting..." : "Submit"}
+          </button>
+        </form>
       </div>
     </main>
   );

@@ -1,14 +1,14 @@
 interface ContactFormEmailProps {
   name: string;
   email: string;
-  subject: string;
+  phone: string;
   message: string;
 }
 
-export const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
+export const VolunteerFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
   name,
   email,
-  subject,
+  phone,
   message,
 }) => (
   <div>
@@ -16,7 +16,7 @@ export const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
     <p>
       from: <strong>{name}</strong> at {email}
     </p>
-    <p>{subject}</p>
+    <p>{phone}</p>
     <h2>Message: </h2>
     <p>{message}</p>
   </div>

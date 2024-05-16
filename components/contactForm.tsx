@@ -1,11 +1,11 @@
 "use client";
 
+import { sendEmail } from "@/app/_actions";
 import { contactSchema } from "@/lib/schema";
 import type { contactFormData } from "@/lib/schema";
-import { sendEmail } from "@/app/_actions";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 
 export function ContactForm() {
@@ -33,10 +33,13 @@ export function ContactForm() {
   };
 
   return (
-    <section className="flex gap-6">
+    <section className="flex flex-col gap-6">
+      <h2 className="text-2xl font-bold text-gray-800 mb-4 capitalize">
+        contact form
+      </h2>
       <form
         onSubmit={handleSubmit(processForm)}
-        className="flex flex-1 flex-col gap-4 sm:w-1/2"
+        className="flex flex-1 flex-col gap-4 sm:w-1/2 md:w-full"
       >
         <input
           placeholder="name"
@@ -83,7 +86,11 @@ export function ContactForm() {
           </p>
         )}
 
-        <button disabled={isSubmitting} type="submit" className="rounded-lg bg-black py-2 text-white">
+        <button
+          disabled={isSubmitting}
+          type="submit"
+          className="rounded-lg bg-black py-2 text-white"
+        >
           {isSubmitting ? "Submitting..." : "Submit"}
         </button>
       </form>
