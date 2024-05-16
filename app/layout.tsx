@@ -33,8 +33,9 @@ export const metadata: Metadata = {
     }
   },
   twitter: {
-    title: 'VheeWorld Foundation',
-    card: 'summary_large_image',
+    title: title,
+    description: description,
+    card: "summary",
     images: 'https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg'
   }
 };
