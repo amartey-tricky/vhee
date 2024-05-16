@@ -1,5 +1,10 @@
-import Image from "next/image";
+import type { Metadata } from 'next';
 import CldImage from "@/components/cldimage";
+
+export const metadata: Metadata = {
+  title: "About || VheeWorld Foundation",
+  description: "Learn more about VheeWorld Foundation, our activities and the team"
+}
 
 const teamMembers = [
   {

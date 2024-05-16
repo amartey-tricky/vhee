@@ -5,10 +5,21 @@ import type { Metadata } from "next";
 import Providers from "./provides";
 import "./globals.css";
 
+const title= "VheeWorld Foundation";
+const description= "Vhee World foundation hopes to mitigate streetism or reduce it to the barest minimum";
+
 export const metadata: Metadata = {
-  title: "VheeWorld Foundation",
-  description:
-    "Vhee World foundation hopes to mitigate streetism or reduce it to the barest minimum",
+  metadataBase: new URL("https://vheeworld.org"),
+  title: title,
+  description: description,
+  openGraph: {
+    title: title,
+    description: description,
+    url: "https://vheeworld.org",
+    siteName: "VheeWorld",
+    locale: "en",
+    type: "website"
+  }
 };
 
 export default function RootLayout({
