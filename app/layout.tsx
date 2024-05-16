@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import Providers from "./provides";
+import PlausibleProvider from "next-plausible"
 import "./globals.css";
 
 const title= "VheeWorld Foundation";
@@ -48,6 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <PlausibleProvider domain="vheeworld.org" />
+      </head>
       <body className={`${inter.className}`}>
         <Header />
         <Providers>{children}</Providers>
