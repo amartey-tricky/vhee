@@ -18,7 +18,24 @@ export const metadata: Metadata = {
     url: "https://vheeworld.org",
     siteName: "VheeWorld",
     locale: "en",
-    type: "website"
+    type: "website",
+    images: ["https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  twitter: {
+    title: 'VheeWorld Foundation',
+    card: 'summary_large_image',
+    images: 'https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg'
   }
 };
 
