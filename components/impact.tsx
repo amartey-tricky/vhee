@@ -7,19 +7,19 @@ export function Impact() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
           <h3 className="text-4xl font-bold text-blue-500 mb-4">
-            <Counter value={1500} direction="up" />
+            <Counter value={2500} direction="up" />
           </h3>
           <p className="text-gray-600">People Served</p>
         </div>
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
           <h3 className="text-4xl font-bold text-blue-500 mb-4">
-            <Counter value={25} direction="up" />
+            <Counter value={18} direction="up" />
           </h3>
           <p className="text-gray-600">Programs</p>
         </div>
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
           <h3 className="text-4xl font-bold text-blue-500 mb-4">
-            <Counter value={10} direction="up" />
+            <Counter value={18} direction="up" />
           </h3>
           <p className="text-gray-600">Communities Impacted</p>
         </div>

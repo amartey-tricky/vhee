@@ -108,8 +108,8 @@ export default function Page() {
             </p>
           </div>
           <div>
-            <Image
-              src="/about-image.jpg"
+            <CldImage
+              src="VHEEWORLD - WEBSITE/IMG_5392_sxwnzn"
               alt="About VheeWorld Foundation"
               width={600}
               height={400}
@@ -122,12 +122,12 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Our Vision</h2>
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-6 md:mb-0">
-              <Image
-                src="/vision-image.jpg"
-                alt="Our Vision"
-                width={400}
-                height={300}
-                className="rounded-lg shadow-md"
+              <CldImage
+                src="VHEEWORLD - WEBSITE/IMG_5429_gqnzzg"
+                alt="About VheeWorld Foundation"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-md md:mt-[104px]"
               />
             </div>
             <div className="md:w-1/2 md:pl-8">
@@ -146,12 +146,12 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Our Mission</h2>
           <div className="flex flex-col md:flex-row-reverse items-center">
             <div className="md:w-1/2 mb-6 md:mb-0">
-              <Image
-                src="/mission-image.jpg"
-                alt="Our Mission"
-                width={400}
-                height={300}
-                className="rounded-lg shadow-md"
+              <CldImage
+                src="VHEEWORLD - WEBSITE/IMG_4988_bvozgv"
+                alt="About VheeWorld Foundation"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-md md:mt-[104px]"
               />
             </div>
             <div className="md:w-1/2 md:pr-8">
