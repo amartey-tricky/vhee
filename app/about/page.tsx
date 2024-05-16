@@ -1,10 +1,41 @@
 import type { Metadata } from 'next';
 import CldImage from "@/components/cldimage";
 
+const title= "About || VheeWorld Foundation"
+const  description= "Learn more about VheeWorld Foundation, our activities and the team"
+
 export const metadata: Metadata = {
-  title: "About || VheeWorld Foundation",
-  description: "Learn more about VheeWorld Foundation, our activities and the team"
-}
+  metadataBase: new URL("https://vheeworld.org"),
+  title: title,
+  description: description,
+  openGraph: {
+    title: title,
+    description: description,
+    url: "https://vheeworld.org",
+    siteName: "VheeWorld",
+    locale: "en",
+    type: "website",
+    images: ["https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  twitter: {
+    title: title,
+    description: description,
+    card: "summary",
+    site: "@site",
+    images: 'https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg'
+  }
+};
 
 const teamMembers = [
   {

@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     title: title,
     description: description,
     card: "summary",
+    site: "@site",
     images: 'https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg'
   }
 };
