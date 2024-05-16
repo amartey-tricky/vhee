@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CldImage from "./cldimage";
 
 const featuredPrograms = [
   {
@@ -7,21 +8,21 @@ const featuredPrograms = [
     title: "Outreach and Intervention",
     description:
       "Our outreach teams engage with individuals living on the streets, offering immediate assistance, counseling, and support services.",
-    image: "/outreach.jpg",
+    image: "anumle/d852270d-1e60-43f5-becb-ac219be94372_fptvyz",
   },
   {
     id: 2,
     title: "Seminars",
     description:
       "We organize seminars and workshops on various topics, such as life skills, personal development, and mental health awareness, to equip individuals with essential knowledge and tools for success.",
-    image: "/skills-training.jpg",
+    image: "kofi-fundraising/The Fund Raising/vhee_world-13_miduvd",
   },
   {
     id: 3,
     title: "Mental Health Support",
     description:
       "We provide comprehensive mental health services, including counseling, therapy, and support groups, to address the unique challenges faced by individuals affected by streetism.",
-    image: "/housing.jpg",
+    image: "kofi-fundraising/The Fund Raising/vhee_world-106_hhsp7e",
   },
 ];
 
@@ -37,12 +38,13 @@ export function FeaturedPrograms() {
             key={program.id}
             className="bg-white rounded-lg shadow-md overflow-hidden"
           >
-            <Image
+            <CldImage
               src={program.image}
               alt={program.title}
               width={500}
               height={300}
               className="w-full h-auto"
+              crop="fill"
             />
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-2">
