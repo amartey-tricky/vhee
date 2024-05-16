@@ -4,8 +4,8 @@ import { useState } from "react";
 
 export function DonationForm() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    name: "",
+    email: "",
     amount: 25,
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -28,23 +28,31 @@ export function DonationForm() {
     e.preventDefault();
     // Here, you can add your logic to handle the donation submission
     // For example, you can integrate with a payment gateway or send the donation data to a server
-    console.log('Form Data:', formData);
+    console.log("Form Data:", formData);
     setFormSubmitted(true);
   };
 
   return (
     <main className="bg-gray-100 min-h-screen py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8">Make a Donation</h1>
+        <h1 className="text-4xl font-bold text-gray-800 mb-8">
+          Make a Donation
+        </h1>
 
         {formSubmitted ? (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-md mb-8">
-            <p>Thank you for your generous donation! Your support helps us make a difference.</p>
+            <p>
+              Thank you for your generous donation! Your support helps us make a
+              difference.
+            </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
-              <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
+              <label
+                htmlFor="name"
+                className="block text-gray-700 font-bold mb-2"
+              >
                 Name
               </label>
               <input
@@ -62,7 +70,10 @@ export function DonationForm() {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
+              <label
+                htmlFor="email"
+                className="block text-gray-700 font-bold mb-2"
+              >
                 Email
               </label>
               <input
@@ -79,7 +90,10 @@ export function DonationForm() {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="amount" className="block text-gray-700 font-bold mb-2">
+              <label
+                htmlFor="amount"
+                className="block text-gray-700 font-bold mb-2"
+              >
                 Donation Amount
               </label>
               <div className="flex items-center">

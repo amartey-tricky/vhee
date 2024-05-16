@@ -1,4 +1,4 @@
-import { Counter } from "@/components/textTicker"
+import { Counter } from "@/components/textTicker";
 
 export function Impact() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { CldImage } from "next-cloudinary";
-import { cormorant,dancingScript } from "./fonts";
+import { cormorant, dancingScript } from "./fonts";
 
 export function FooterLogo() {
   return (
@@ -15,8 +15,16 @@ export function FooterLogo() {
         height={50}
       />
       <p className="px-4 font-semibold text-md md:text-xl">
-        <span className={`${cormorant.className} text-[#491BA2] font-bold text-xl md:text-2xl`}>Vhee</span>
-        <span className={`${dancingScript.className} text-blue-800 md:text-[#408BE8]`}>World</span>
+        <span
+          className={`${cormorant.className} text-[#491BA2] font-bold text-xl md:text-2xl`}
+        >
+          Vhee
+        </span>
+        <span
+          className={`${dancingScript.className} text-blue-800 md:text-[#408BE8]`}
+        >
+          World
+        </span>
       </p>
     </div>
   );

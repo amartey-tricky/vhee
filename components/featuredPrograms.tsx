@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 const featuredPrograms = [
   {
@@ -20,7 +20,7 @@ const featuredPrograms = [
     id: 3,
     title: "Mental Health Support",
     description:
-    "We provide comprehensive mental health services, including counseling, therapy, and support groups, to address the unique challenges faced by individuals affected by streetism.",
+      "We provide comprehensive mental health services, including counseling, therapy, and support groups, to address the unique challenges faced by individuals affected by streetism.",
     image: "/housing.jpg",
   },
 ];

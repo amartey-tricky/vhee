@@ -1,5 +1,5 @@
+import { FooterLogo } from "@/components/footerLogo";
 import Link from "next/link";
-import { FooterLogo } from "@/components/footerLogo"
 
 const Links = [
   {
@@ -58,10 +58,7 @@ export function Footer() {
             ™. All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <Link
-              href="#"
-              className="md:text-gray-500 hover:text-gray-900"
-            >
+            <Link href="#" className="md:text-gray-500 hover:text-gray-900">
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -75,10 +72,7 @@ export function Footer() {
                 />
               </svg>
             </Link>
-            <Link
-              href="#"
-              className="md:text-gray-500 hover:text-gray-900"
-            >
+            <Link href="#" className="md:text-gray-500 hover:text-gray-900">
               <svg
                 className="w-5 h-5"
                 fill="currentColor"
@@ -92,10 +86,7 @@ export function Footer() {
                 />
               </svg>
             </Link>
-            <Link
-              href="#"
-              className="md:text-gray-500 hover:text-gray-900"
-            >
+            <Link href="#" className="md:text-gray-500 hover:text-gray-900">
               <svg
                 className="w-5 h-5"
                 fill="currentColor"

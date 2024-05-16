@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import clsx from "clsx";
+import Link from "next/link";
 import { DonationButton } from "./donationButton";
 
 const menuLinks = [

@@ -4,21 +4,23 @@ import CldImage from "@/components/cldimage";
 const blogPosts = [
   {
     id: 1,
-    title: "Overcoming Homelessness: Stories of Hope and Resilience",
-    author: "John Doe",
-    date: "May 1, 2023",
-    image: "blog/post1_zqxnvu",
+    title: "All You Need To Know About Vhee World Foundation",
+    author: "Kumi Robert",
+    date: "9th January, 2021",
+    image: "VHEEWORLD - WEBSITE/IMG_4988_bvozgv",
     excerpt:
-      "In this blog post, we share inspiring stories of individuals who have overcome the challenges of homelessness and rebuilt their lives.",
+      "Vhee World Foundation is a registered, funding/non-profit charity organisation that was established in 2015 by an ambitious young lady, Ms. Violet Lawson at age 19.",
+    link: "https://successafrica.info/all-you-need-to-know-about-vhee-world-foundation/",
   },
   {
     id: 2,
-    title: "The Impact of Education on Reducing Streetism",
-    author: "Jane Smith",
-    date: "April 15, 2023",
-    image: "blog/post2_t8cjkl",
+    title: "VHEEWORLD FOUNDATION: The Strive to Overcome 'Streetism'",
+    author: "Sheen Magazine",
+    date: "16th January, 2021",
+    image: "VHEEWORLD - WEBSITE/Vheeworld/IMG_5379_xpheqm",
     excerpt:
-      "Education plays a crucial role in empowering individuals and breaking the cycle of streetism. Learn about our educational initiatives and their impact.",
+      "Inspiring, empowering, and game-changing; these are a few terms that describe the essence of Vheeworld foundation. A not-for-profit organization established in 2015",
+    link: "https://www.sheenmagazine.com/vheeworld-foundation-the-strive-to-overcome-streetism/",
   },
   {
     id: 3,
@@ -40,7 +42,7 @@ export default function BlogPage() {
           {blogPosts.map((post) => (
             <Link
               key={post.id}
-              href={`/blog/${post.id}`}
+              href={`${post.link}`}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
               <div>
@@ -48,10 +50,11 @@ export default function BlogPage() {
                   src={post.image}
                   alt={post.title}
                   width={400}
-                  height={300}
-                  className="w-full h-auto"
+                  a
+                  height={150}
+                  className="h-auto w-full"
                   priority={false}
-                  aspectRatio="16:9"
+                  aspectRatio="9:16"
                 />
               </div>
               <div className="p-6">

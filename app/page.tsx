@@ -1,12 +1,14 @@
-import Link from "next/link";
-import { Hero } from "@/components/hero";
 import { FeaturedPrograms } from "@/components/featuredPrograms";
+import { Hero } from "@/components/hero";
 import { Impact } from "@/components/impact";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="flex flex-col justify-between items-center">
-      <div className="absolute top-0 -z-10 h-full w-full bg-white"><div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]" /></div>
+      <div className="absolute top-0 -z-10 h-full w-full bg-white">
+        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]" />
+      </div>
       <Hero />
       <Impact />
       <FeaturedPrograms />
