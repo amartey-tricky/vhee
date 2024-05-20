@@ -4,7 +4,7 @@ export default function robot(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: "*",
+        userAgent: ["googlebot", "bingbot", "yandex", "applebot"],
         allow: "/",
         disallow: ["/api"]
       },
