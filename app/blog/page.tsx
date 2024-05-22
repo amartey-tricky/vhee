@@ -24,12 +24,13 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "Sustainable Solutions for Preventing Streetism",
-    author: "Michael Johnson",
-    date: "March 30, 2023",
-    image: "blog/post3_a9b7cd",
+    title: "VheeWorld Foundation Triumphs at 2021 Humanitarian Awards: A Beacon of Hope and Change",
+    author: "Violet Lawson",
+    date: "March 30, 2022",
+    image: "photo_2024-05-22_12-26-41_co7vr6",
     excerpt:
-      "Discover sustainable solutions and long-term strategies implemented by VheeWorld Foundation to prevent streetism and promote social inclusion.",
+      "In a remarkable testament to its unwavering commitment to social change, VheeWorld Foundation recently shone brightly at the prestigious 2021 Humanitarian Awards.",
+    link: "/blog/vheeworld-foundation-triumphs",
   },
 ];
 
