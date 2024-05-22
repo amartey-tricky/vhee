@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 import CldImage from "@/components/cldimage";
 
-const title= "About || VheeWorld Foundation"
-const  description= "Learn more about VheeWorld Foundation, our activities and the team"
+const title = "About || VheeWorld Foundation";
+const description =
+  "Learn more about VheeWorld Foundation, our activities and the team";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vheeworld.org"),
@@ -15,7 +16,9 @@ export const metadata: Metadata = {
     siteName: "VheeWorld",
     locale: "en",
     type: "website",
-    images: ["https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg"]
+    images: [
+      "https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg",
+    ],
   },
   robots: {
     index: true,
@@ -23,18 +26,19 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
-    }
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   twitter: {
     title: title,
     description: description,
     card: "summary",
     site: "@site",
-    images: 'https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg'
-  }
+    images:
+      "https://res.cloudinary.com/dbgxgfsbl/image/upload/v1714659410/VHEEWORLD%20-%20WEBSITE/IMG_4322_kvkfau.jpg",
+  },
 };
 
 const teamMembers = [
@@ -133,14 +137,14 @@ export default function Page() {
               organization.
             </p>
             <p className="text-gray-600 mb-6 text-justify">
-              The foundation has been in existence for the past nine (9) years,
-              successfully hosting annual charity projects and living up to
-              their motto. The foundation raises the awareness on the less
-              privileged in society who live in the streets with no one to turn
-              to as well as the importance of a positive and healthy mental
-              health. During their annual projects, they feed, educate and cloth
-              these individuals with the hopes of making their lives a little
-              less burdensome.
+              The foundation has been in existence for the past nine (9) years
+              since 2015, successfully hosting annual charity projects and
+              living up to their motto. The foundation raises the awareness on
+              the less privileged in society who live in the streets with no one
+              to turn to as well as the importance of a positive and healthy
+              mental health. During their annual projects, they feed, educate
+              and cloth these individuals with the hopes of making their lives a
+              little less burdensome.
             </p>
           </div>
           <div>
@@ -168,11 +172,7 @@ export default function Page() {
             </div>
             <div className="md:w-1/2 md:pl-8">
               <p className="text-gray-600 mb-6">
-                Our vision is a world where everyone has access to
-                opportunities, dignity, and a chance to thrive, regardless of
-                their circumstances. We envision communities where streetism is
-                a thing of the past, and individuals and families can live
-                fulfilling lives with hope and purpose.
+                Our vision is to break the cycle of homelessness and echo the importance of a healthy mind, empowering vulnerable individuals, providing them with opportunities, resources and mental health support to build healthy lives and contribute positively to society.
               </p>
             </div>
           </div>
@@ -192,12 +192,7 @@ export default function Page() {
             </div>
             <div className="md:w-1/2 md:pr-8">
               <p className="text-gray-600 mb-6">
-                Our mission is to empower individuals and families affected by
-                streetism by providing comprehensive support, resources, and
-                opportunities for personal growth and self-sufficiency. We
-                strive to create lasting change by addressing the root causes of
-                streetism, advocating for inclusive policies, and fostering
-                collaborative efforts within communities.
+                Our mission is to minimize the streetism and address the mental health challenges through community engagement, donations and advocacy.
               </p>
             </div>
           </div>

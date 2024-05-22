@@ -22,7 +22,7 @@ const projects = [
     image: "projects/4d87396f-c2ff-484f-ba43-661f75e61164_r5f0ig",
     location: "Nakwabi",
     date: "January 2023",
-    galleryLink: "/projects/up-north",
+    galleryLink: "/projects/charity-up-north",
   },
   {
     id: 4,
