@@ -5,7 +5,7 @@ const projects = [
   {
     id: 1,
     image: "projects/IMG_4698_lmza5r",
-    location: "New Haven School",
+    location: "New Haven Autism School",
     date: "Donation",
     galleryLink: "/projects/kofi-project/donation",
   },
