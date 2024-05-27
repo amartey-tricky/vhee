@@ -15,14 +15,14 @@ const featuredPrograms = [
     title: "Seminars",
     description:
       "We organize seminars and workshops on various topics, such as life skills, personal development, and mental health awareness, to equip individuals with essential knowledge and tools for success.",
-    image: "kofi-fundraising/The Fund Raising/vhee_world-13_miduvd",
+    image: "funderaising/vhee_world-13_of3lsx",
   },
   {
     id: 3,
     title: "Mental Health Support",
     description:
       "We provide comprehensive mental health services, including counseling, therapy, and support groups, to address the unique challenges faced by individuals affected by streetism.",
-    image: "kofi-fundraising/The Fund Raising/vhee_world-106_hhsp7e",
+    image: "funderaising/vhee_world-69_wtsjuj",
   },
 ];
 
