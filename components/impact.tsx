@@ -24,6 +24,7 @@ export function Impact() {
           <p className="text-gray-600">Communities Impacted</p>
         </div>
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
+        <p className="text-gray-600">About</p>
           <h3 className="text-4xl font-bold text-blue-500 mb-4">
             <span>GH¢ 100,000</span>
           </h3>
