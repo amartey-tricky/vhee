@@ -5,10 +5,10 @@ export default function robot(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: ["googlebot", "bingbot", "yandex", "applebot"],
-        allow: "/",
+        allow: ["/", "/about", "/projects", "/blog", "/donate", "/volunteer", "/contact"],
         disallow: ["/api"]
       },
     ],
-    sitemap: "vheeworld.org/sitemap.xml"
+    sitemap: "https://www.vheeworld.org/sitemap.xml"
   }
 }

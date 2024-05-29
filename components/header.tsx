@@ -48,7 +48,7 @@ export function Header() {
 
   return (
     <>
-      <header className="w-full h-auto top-0">
+      <header className="w-full max-w-screen-xl h-auto top-0">
         <div className="px-12 backdrop-blur-lg flex items-center justify-between">
           <Link href="/">
             <HeaderLogo />
