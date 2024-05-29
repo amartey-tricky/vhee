@@ -34,6 +34,10 @@ const Links = [
     name: "Projects",
     href: "/projects",
   },
+  {
+    name: "Privacy Policy",
+    href: "/privacy-policy"
+  }
 ];
 
 export function Footer() {
