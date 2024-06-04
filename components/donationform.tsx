@@ -35,13 +35,12 @@ export default function DonationForm() {
 
   const onSuccess = (reference: string) => {
     console.log(reference);
-    toast.success("Donation successful!")
-    reset();
+    toast.success("Donation successful!");
   };
 
   const onClose = () => {
     console.log("Payment closed");
-    toast.error("Payment Closed")
+    toast.error("Payment Closed");
   };
 
   const config: PaystackConfig = {
@@ -51,23 +50,24 @@ export default function DonationForm() {
     amount: 0,
     currency: "GHS",
     callback_url: "https:vheeworld.org/thank-you",
-    channels: ["card", "mobile_money", "apple_pay"],
+    channels: ["card", "mobile_money"],
     publicKey: key,
-  }
+  };
 
-  const initializePayment = usePaystackPayment(config)
+  const initializePayment = usePaystackPayment(config);
 
   const onSubmit: SubmitHandler<donationFormData> = (data) => {
     config.email = data.email;
     config.amount = data.amount * 100;
     initializePayment({ onSuccess, onClose });
+    reset();
   };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-6">
       <h1 className="text-4xl font-bold mb-4">Make a Donation</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-md">
-      <div className="mb-4">
+        <div className="mb-4">
           <label htmlFor="name" className="block mb-2">
             Name
           </label>
@@ -77,9 +77,7 @@ export default function DonationForm() {
             {...register("name")}
             className="w-full px-4 py-2 border border-gray-300 rounded"
           />
-          {errors.name && (
-            <p className="text-red-500">{errors.name.message}</p>
-          )}
+          {errors.name && <p className="text-red-500">{errors.name.message}</p>}
         </div>
         <div className="mb-4">
           <label htmlFor="email" className="block mb-2">
@@ -103,7 +101,7 @@ export default function DonationForm() {
             id="amount"
             type="number"
             step="10"
-            {...register("amount", { valueAsNumber: true})}
+            {...register("amount", { valueAsNumber: true })}
             className="w-full px-4 py-2 border border-gray-300 rounded"
           />
           {errors.amount && (
