@@ -33,7 +33,7 @@ export function VolunteerForm() {
   };
 
   return (
-    <main className="bg-gray-100 min-h-screen py-24">
+    <main className="min-h-screen py-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-8">
           Volunteer with Us

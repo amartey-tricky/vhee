@@ -20,3 +20,11 @@ export const volunteerSchema = z.object({
 });
 
 export type volunteerFormData = z.infer<typeof volunteerSchema>;
+
+export const donationSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  amount: z.number().min(1, "Amount is required"),
+})
+
+export type donationFormData = z.infer<typeof donationSchema>;

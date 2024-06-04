@@ -1,4 +1,5 @@
-import { DonationForm } from "@/components/donationForm";
+import DonationForm from "@/components/donationform";
+
 
 export default function Page() {
   return (
