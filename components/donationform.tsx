@@ -31,8 +31,6 @@ export default function DonationForm() {
     resolver: zodResolver(donationSchema),
   });
 
-  const result = donationSchema;
-
   const onSuccess = (reference: string) => {
     console.log(reference);
     toast.success("Donation successful!");
