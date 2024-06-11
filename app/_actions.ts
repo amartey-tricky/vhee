@@ -19,11 +19,10 @@ export async function sendEmail(data: contactFormData) {
       const data = await resend.emails.send({
         from: "VheeWorld Website <info@vheeworld.org>",
         to: ["vheeworld@gmail.com"],
-        subject: "Contact From Submission",
+        subject: "Contact Form Submission",
         text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
         react: ContactFormEmail({ name, email, subject, message }),
-      });
-      return { success: true, data };
+      });      return { success: true, data };
     } catch (error) {
       return { success: false, error };
     }
@@ -43,7 +42,7 @@ export async function sendVolunteer(data: volunteerFormData) {
       const data = await resend.emails.send({
         from: "VheeWorld Website <info@vheeworld.org>",
         to: ["vheeworld@gmail.com"],
-        subject: "Volunteer From Submission",
+        subject: "Volunteer Form Submission",
         text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
         react: VolunteerFormEmail({ name, email, phone, message }),
       });

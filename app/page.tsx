@@ -1,6 +1,7 @@
 import { FeaturedPrograms } from "@/components/featuredPrograms";
 import { Hero } from "@/components/hero";
 import { Impact } from "@/components/impact";
+import { About } from "@/components/about";
 import Link from "next/link";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       </div>
       <Hero />
       <Impact />
+      <About />
       <FeaturedPrograms />
       <section className="mt-20 bg-blue-500 text-white py-16 px-8 rounded-tl-lg rounded-tr-lg md:rounded-lg">
         <div className="max-w-3xl mx-auto text-center">
