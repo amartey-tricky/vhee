@@ -36,8 +36,8 @@ const Links = [
   },
   {
     name: "Privacy Policy",
-    href: "/privacy-policy"
-  }
+    href: "/privacy-policy",
+  },
 ];
 
 export function Footer() {
@@ -71,7 +71,7 @@ export function Footer() {
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <Link
-              href="https://web.facebook.com/vheeworldfoundation"
+              href="https://www.facebook.com/share/cbsjEbej3wAVPAqE/?mibextid=LQQJ4d"
               className="md:text-gray-500 hover:text-gray-900"
             >
               <svg
@@ -105,7 +105,7 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://www.instagram.com/vheeworld/?hl=en"
+              href="https://www.instagram.com/vheeworld?igsh=NnYyNHZxMzRjcXc3"
               className="md:text-gray-500 hover:text-gray-900"
             >
               <svg
@@ -122,7 +122,7 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://twitter.com/vheeworld"
+              href="https://x.com/vheeworld?t=wrSM9rLCJ5puBAMoIEbXWA&s=09"
               className="md:text-gray-500 hover:text-gray-900"
             >
               <svg
@@ -132,6 +132,19 @@ export function Footer() {
                 aria-hidden="true"
               >
                 <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </Link>
+            <Link
+              href="https://www.youtube.com/@VheeWORLDFoundation"
+              className="md:text-gray-500 hover:text-gray-900"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,14.598V9.402c0-0.385,0.417-0.625,0.75-0.433l4.5,2.598c0.333,0.192,0.333,0.674,0,0.866l-4.5,2.598 C10.417,15.224,10,14.983,10,14.598z" />
               </svg>
             </Link>
           </div>
