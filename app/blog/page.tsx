@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CldImage from "@/components/cldimage";
+import { title } from "process";
 
 const blogPosts = [
   {
@@ -32,6 +33,15 @@ const blogPosts = [
       "In a remarkable testament to its unwavering commitment to social change, VheeWorld Foundation recently shone brightly at the prestigious 2021 Humanitarian Awards.",
     link: "/blog/vheeworld-foundation-triumphs",
   },
+  {
+    id: 4,
+    title: "Your Mental Oasis",
+    author: "Stephan Adjei",
+    date: "April 15, 2024",
+    image: "funderaising/vhee_world-29_xbjlmk",
+    excerpt: "Mental health. It's a term we hear thrown around a lot, but what exactly does it mean? Simply put, mental health encompasses our emotional, psychological, and social well-being.",
+    link: "/blog/your-mental-health-oasis",
+  }
 ];
 
 export default function BlogPage() {
