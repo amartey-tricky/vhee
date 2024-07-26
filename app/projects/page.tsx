@@ -49,6 +49,7 @@ const projects = [
     image: "projects/WhatsApp_Image_2024-05-12_at_7.17.17_PM_cblwbj",
     location: "Anumle",
     date: "July 2018",
+    collaboration: "Youngatheartgh",
     galleryLink: "/projects/we-came-back-for-u",
   },
   {
@@ -56,6 +57,7 @@ const projects = [
     image: "projects/VWF_-_collab_sz9b6i",
     location: "Shiashie",
     date: "January 2018",
+    collaboration: "Littlehearts Foundation",
     galleryLink: "/projects/fill-a-belly",
   },
   {
@@ -92,6 +94,7 @@ export default function Projects() {
                   crop="fill"
                 />
                 <div className="absolute bottom-0 left-0 p-4 bg-gray-800 bg-opacity-75 text-white">
+                  <p className="text-sm">{project.collaboration}</p>
                   <p className="text-sm">{project.location}</p>
                   <p className="text-sm">{project.date}</p>
                 </div>
