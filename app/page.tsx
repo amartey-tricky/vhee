@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { Impact } from "@/components/impact";
 import { About } from "@/components/about";
 import Link from "next/link";
+import Countdown from "@/components/countdown";
 
 export default function Home() {
   return (
@@ -11,6 +12,15 @@ export default function Home() {
         <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]" />
       </div>
       <Hero />
+      <section className="mt-20 px-12 md:px-24 space-y-12">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">Social Impact</h2>
+          <p>We are launching a special project stay tuned</p>
+        </div>
+        <div>
+          <Countdown />
+        </div>
+      </section>
       <Impact />
       <About />
       <FeaturedPrograms />
