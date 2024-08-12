@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero";
 import { Impact } from "@/components/impact";
 import { About } from "@/components/about";
 import Link from "next/link";
-import YoutubePlayer from "@/components/youtubeplayer";
+import VideoPlayer from "@/components/videoplayer";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]" />
       </div>
       <Hero />
-      <YoutubePlayer />
+      <VideoPlayer />
       <Impact />
       <About />
       <FeaturedPrograms />
