@@ -12,7 +12,7 @@ const nextConfig = {
         hostname: "drive.google.com",
       },
     ],
-  },
+  }
 };
 
 export default withNextVideo(nextConfig);
